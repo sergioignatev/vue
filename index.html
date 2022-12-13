@@ -2,43 +2,23 @@
 <script src="https://unpkg.com/vue-router@4"></script>
 
 <div id="app">
-  <h1>Hello App!</h1>
+ <div id="exemple">
+<h1>HELLO VUE</h1>
+<h2>AND ALL THE OTHER STAFF</h2>
+
+ </div>
   <ul>
-    <!-- use the router-link component for navigation. -->
-    <!-- specify the link by passing the `to` prop. -->
-    <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
+
+  
     <li><router-link to="/">Go to Home</router-link></li>
     <li><router-link to="/about">Go to About</router-link></li>
-    <router-link to="/phone">PHONE</router-link>
+    <li><router-link to="/phone">Go to Phone</router-link></li>
     </ul>
-  <!-- route outlet -->
-  <!-- component matched by the route will render here -->
-  <router-view></router-view>
+
+  <router-view ></router-view>
   <h2>Continue</h2>
-  <script>
-
-const Home = { template: '<div>Home</div>' }
-const About = { template: '<div>About</div>' }
-const Phone = { template: '<div>Phone</div>' }
-//
-const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About },
-  { path:'/phone',component: Phone}
-]
-
-const router = VueRouter.createRouter({
   
-  history: VueRouter.createWebHashHistory(),
-  routes, 
-})
-
-
-const app = Vue.createApp({})
-
-app.use(router)
-
-app.mount('#app')
+  <script src="scripts.js">
 
 
 
