@@ -3,7 +3,7 @@ return `<div style="color:red">HELLO THERE ${x}</div>`
 
 }
 
-const Home = { template: '<div>Home</div>' }
+const Home = { template: '<div><a href="circles.html">c</a></div>' }
 const About = { template: Here("About") }
 const Phone = { template:Here('phone')}
 //

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.h2:before{
+--m:40px;
+  content: '';
+  width:220px;
+  margin-top:var(--m);
+  margin-left:50px;
+  aspect-ratio:1;
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: conic-gradient(yellow 55%,#0000 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 0 95px, green 15px)
+}
+
+
+
+.h1:before{
+--m:20px;
+  content: '';
+  width:260px;
+  margin-top:var(--m);
+  margin-left:30px;
+  aspect-ratio:1;
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: conic-gradient(green 64%,#0000 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 0 115px, green 15px)
+}
+
+
+
+.div:before{
+display:flex;
+
+  content: '';
+  width:300px;
+  margin-left:10px;
+  aspect-ratio:1;
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: conic-gradient(red 98%,#0000 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 0 135px, green 15px)
+}
+#main{
+width:fit-content;
+aspect-ratio:1;
+position:absolute;
+border:1px solid red;
+
+margin-left:65px;}
+</style>
+</head>
+<body>
+
+<div id='main'>
+
+<div class='div'><div class='h1'>
+<div class='h2'></div>
+</div></div>
+
+</div>
+<script>
+
+</script>
+</body>
+</html>

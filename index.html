@@ -1,6 +1,6 @@
 <script src="https://unpkg.com/vue@3"></script>
 <script src="https://unpkg.com/vue-router@4"></script>
-
+<script src="https://www.w3schools.com/lib/w3.js"></script>
 <div id="app">
  <div id="exemple">
 <h1>HELLO VUE</h1>
@@ -14,10 +14,12 @@
     <li><router-link to="/about">Go to About</router-link></li>
     <li><router-link to="/phone">Go to Phone</router-link></li>
     </ul>
-
+<div w3-include-html="circles.html"></div>
   <router-view ></router-view>
   <h2>Continue</h2>
-  
+  <script>
+    w3.includeHTML();
+    </script>
   <script src="scripts.js">
 
 
