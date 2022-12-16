@@ -55,7 +55,7 @@ aspect-ratio:1;
 position:absolute;
 border:1px solid red;
 
-margin-left:65px;}
+margin-left:650px;}
 </style>
 </head>
 <body>
@@ -68,7 +68,9 @@ margin-left:65px;}
 
 </div>
 <script>
-
+    let w=window.innerWidth;
+    let s=w-350
+document.getElementById("main").style.marginLeft=`${s}px`
 </script>
 </body>
 </html>
