@@ -6,6 +6,7 @@
 
 .h2:before{
 --m:40px;
+
   content: '';
   width:220px;
   margin-top:var(--m);
@@ -14,13 +15,14 @@
   position: absolute;
   border-radius: 50%;
   inset: 0;
-  background: conic-gradient(yellow 55%,#0000 0);
+  background: conic-gradient(yellow var(--ycirc),#0000 0);
   -webkit-mask:radial-gradient(farthest-side,#0000 0 95px, green 15px)
 }
 
 
 
 .h1:before{
+
 --m:20px;
   content: '';
   width:260px;
@@ -30,7 +32,7 @@
   position: absolute;
   border-radius: 50%;
   inset: 0;
-  background: conic-gradient(green 64%,#0000 0);
+  background: conic-gradient(var(--color) var(--cir),#0000 0);
   -webkit-mask:radial-gradient(farthest-side,#0000 0 115px, green 15px)
 }
 
@@ -46,7 +48,7 @@ display:flex;
   position: absolute;
   border-radius: 50%;
   inset: 0;
-  background: conic-gradient(red 98%,#0000 0);
+  background: conic-gradient(red var(--rcirc),#0000 0);
   -webkit-mask:radial-gradient(farthest-side,#0000 0 135px, green 15px)
 }
 #main{
@@ -55,22 +57,35 @@ aspect-ratio:1;
 position:absolute;
 border:1px solid red;
 
-margin-left:650px;}
+margin-left:6px;}
 </style>
 </head>
 <body>
 
 <div id='main'>
 
-<div class='div'><div class='h1'>
-<div class='h2'></div>
-</div></div>
+
 
 </div>
+<button style='position:relative;margin-top:300px;' onclick='main()'>b</button>
 <script>
-    let w=window.innerWidth;
-    let s=w-350
-document.getElementById("main").style.marginLeft=`${s}px`
+function main(){
+let x=0;
+let id=setInterval(myF,10)
+function myF(){
+x++
+if(x>=100){
+clearInterval(id);
+
+}
+document.querySelector('#main').innerHTML=`
+<div style='--rcirc:${x}%;' class='div'>
+<div class='h1' style='--cir:${x-20}%;--color:green;'>
+<div class='h2' style='--ycirc:${x-40}%;'></div>
+</div></div>
+
+`}
+}
 </script>
 </body>
 </html>
